@@ -43,7 +43,6 @@
     }
 
     section {
-      min-height: 100vh;
       padding: 80px 0;
       opacity: 0;
       transition: var(--transition);
@@ -1371,7 +1370,7 @@
     function createCodeRain() {
       const container = document.getElementById('code-rain');
       // Número moderado de colunas
-      const columns = 15;
+      const columns = (window.innerWidth / 100) + 10;
       const characters = '01';
 
       // Limpar container antes de criar novas colunas
@@ -1455,7 +1454,7 @@
         column.classList.add('code-column');
 
         column.style.left = `${Math.random() * 100}%`;
-        column.style.fontSize = `${Math.random() * 10 + 8}px`;
+        column.style.fontSize = `${Math.random() * 10  + (window.innerWidth / 100)}px`;
 
         const useSecondary = Math.random() > 0.3;
         column.style.color = useSecondary ? secondaryColor : primaryColor;
