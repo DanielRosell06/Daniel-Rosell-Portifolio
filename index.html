@@ -7,7 +7,6 @@
   <title>Daniel Rosell | Portfólio</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <script src="config.js" defer></script>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     :root {
@@ -1090,7 +1089,7 @@
           </div>
           <h3 class="service-title">Desenvolvimento Mobile</h3>
           <p class="service-description">Desenvolvimento de aplicativos nativos e híbridos para iOS e Android utilizando
-          Flutter e static APIs.</p>
+            Flutter e static APIs.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
@@ -1318,7 +1317,14 @@
           </div>
         </div>
         <div class="contact-right">
-          <form id="contactForm" class="contact-form" method="POST">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Campo honeypot (anti-spam) -->
+            <p style="display: none;">
+              <label>Não preencha este campo: <input name="bot-field" /></label>
+            </p>
+
             <div class="form-group">
               <label for="name">Nome</label>
               <input type="text" id="name" name="name" class="form-control" required>
@@ -1335,7 +1341,9 @@
               <label for="message">Mensagem</label>
               <textarea id="message" name="message" class="form-control" required></textarea>
             </div>
-            <button type="submit" class="btn">Enviar Mensagem</button>
+            <button type="submit" class="btn">
+              <span class="btn-text">Enviar Mensagem</span>
+            </button>
           </form>
         </div>
       </div>
