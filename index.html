@@ -7,6 +7,7 @@
   <title>Daniel Rosell | Portfólio</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="config.js" defer></script>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     :root {
@@ -520,6 +521,11 @@
       margin-top: 30px;
     }
 
+    .skill-items {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
     .skill-item {
       background-color: var(--card-bg);
       padding: 10px 20px;
@@ -606,6 +612,45 @@
       gap: 5px;
       font-size: 14px;
       font-weight: 500;
+    }
+
+    .github-projects-container {
+      text-align: center;
+      margin-top: 40px;
+      padding: 30px 0;
+    }
+
+    .github-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background-color: var(--card-bg);
+      color: var(--primary-color);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid var(--card-bg);
+    }
+
+    .github-button:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .github-button .arrow {
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .github-button:hover .arrow {
+      transform: translateX(3px);
+    }
+
+    .fab.fa-github {
+      font-size: 1.2em;
     }
 
     /* Contato Section */
@@ -980,29 +1025,30 @@
         <div class="glow-secondary"></div>
       </div>
       <div class="hero-image-wrapper">
-        <img src="Penguin-image-removebg-preview.png" alt="Pinguim Developer" class="rocket-penguin">
+        <img src="images/Penguin-image-removebg-preview.png" alt="Pinguim Developer" class="rocket-penguin">
         <div class="tech-glows"></div>
       </div>
 
       <div class="hero-text">
         <h1 class="hero-name">Daniel Rosell</h1>
-        <h3 class="hero-title">Desenvolvedor Full Stack & Mobile</h3>
-        <p class="hero-intro">Estudante de Sistemas de Informação na UNICAMP, programador desde os 11 anos com
-          experiência em desenvolvimento web e mobile.</p>
+        <h3 class="hero-title">Desenvolvedor Full Stack | Estudante de SI na UNICAMP</h3>
+        <p class="hero-intro">Olá Sou Daniel, desenvolvedor apaixonado por tecnologia e desafios. Desde os 11 anos
+          venho mergulhando no universo da programação, sempre em busca de projetos que ampliem meus conhecimentos.
+          Atualmente, estou cursando Sistemas de Informação na Universidade Estadual de Campinas (UNICAMP).</p>
 
         <!-- Seção de Estatísticas -->
         <div class="stats-container">
           <div class="stat-card">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Projetos no GitHub</div>
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Anos de Experiência</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">10+</div>
-            <div class="stat-label">Sites Desenvolvidos</div>
+            <div class="stat-label">Projetos GitHub</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">1</div>
-            <div class="stat-label">App Publicado</div>
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Sites Profissionais Feitos</div>
           </div>
         </div>
 
@@ -1044,7 +1090,7 @@
           </div>
           <h3 class="service-title">Desenvolvimento Mobile</h3>
           <p class="service-description">Desenvolvimento de aplicativos nativos e híbridos para iOS e Android utilizando
-            React Native, Flutter e tecnologias avançadas.</p>
+          Flutter e static APIs.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
@@ -1052,7 +1098,7 @@
           </div>
           <h3 class="service-title">Back-End</h3>
           <p class="service-description">Criação de APIs robustas, sistemas de banco de dados e lógica de servidor
-            utilizando Node.js, Python, Java e frameworks relacionados.</p>
+            utilizando Node.js, Python, Next.js e frameworks relacionados.</p>
         </div>
       </div>
     </div>
@@ -1064,7 +1110,7 @@
       <h2 class="section-title">Sobre Mim</h2>
       <div class="sobre-content">
         <div class="sobre-left">
-          <img src="Daniel.jpg" alt="Daniel Rosell" class="sobre-image">
+          <img src="images/Daniel.jpg" alt="Daniel Rosell" class="sobre-image">
         </div>
         <div class="sobre-right">
           <h3 class="sobre-title">Quem sou eu?</h3>
@@ -1075,19 +1121,36 @@
             também proporcionem uma experiência excepcional aos usuários. Trabalho com foco em qualidade, usabilidade e
             performance.</p>
           <h4 style="margin-top: 30px; margin-bottom: 15px;">Minhas habilidades:</h4>
-          <div class="skills-container">
-            <span class="skill-item">HTML5</span>
-            <span class="skill-item">CSS3</span>
-            <span class="skill-item">JavaScript</span>
-            <span class="skill-item">React</span>
-            <span class="skill-item">Node.js</span>
-            <span class="skill-item">React Native</span>
-            <span class="skill-item">Python</span>
-            <span class="skill-item">Java</span>
-            <span class="skill-item">Firebase</span>
-            <span class="skill-item">MongoDB</span>
-            <span class="skill-item">SQL</span>
-            <span class="skill-item">Git</span>
+          <div class="skill-category">
+            <h4>Linguagens</h4>
+            <div class="skill-items">
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">TypeScript</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">C/C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Frontend</h4>
+            <div class="skill-items">
+              <span class="skill-item">HTML5</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">Next.js</span>
+              <span class="skill-item">Tailwind</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Backend & DB</h4>
+            <div class="skill-items">
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">Express</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">MySQL</span>
+              <span class="skill-item">Prisma</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1100,68 +1163,123 @@
       <h2 class="section-title">Meu Repertório</h2>
       <div class="projects-container">
         <div class="project-card">
-          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" class="project-img">
-            <rect width="400" height="200" fill="#333" />
-            <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="18px" fill="#fff" text-anchor="middle"
-              dy=".3em">Projeto 1</text>
-          </svg>
+          <img src="images/Repertorio-01.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
           <div class="project-card-content">
-            <h3 class="project-card-title">App de Finanças Pessoais</h3>
-            <p class="project-card-description">Aplicativo para gestão de finanças pessoais com recursos de orçamento,
-              relatórios e notificações personalizadas.</p>
+            <h3 class="project-card-title">Site NextSize</h3>
+            <p class="project-card-description">A NextSize é um grupo entre alnos da UNICAMP, que se reuniram com o
+              objetivo de ampliar as suas noções profissionais através do desenvolvimento WEB.
+            </p>
             <div class="project-card-tags">
-              <span class="project-card-tag">React Native</span>
-              <span class="project-card-tag">Firebase</span>
-              <span class="project-card-tag">Redux</span>
+              <span class="project-card-tag">HTML</span>
+              <span class="project-card-tag">CSS</span>
+              <span class="project-card-tag">JavaScript</span>
             </div>
             <div class="project-card-links">
-              <a href="#" class="project-card-link"><i class="fas fa-link"></i> Ver Demo</a>
-              <a href="#" class="project-card-link"><i class="fab fa-github"></i> Código</a>
+              <a href="https://nextsize.netlify.app/" class="project-card-link"><i class="fas fa-link"></i> Ver
+                Demo</a>
+              <a href="https://github.com/DanielRosell06/Site-Web-Dev" class="project-card-link"><i
+                  class="fab fa-github"></i> Código</a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" class="project-img">
-            <rect width="400" height="200" fill="#333" />
-            <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="18px" fill="#fff" text-anchor="middle"
-              dy=".3em">Projeto 1</text>
-          </svg>
+          <img src="images/Repertorio-02.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
           <div class="project-card-content">
-            <h3 class="project-card-title">E-commerce de Tecnologia</h3>
-            <p class="project-card-description">Plataforma completa de e-commerce com sistema de pagamentos, gestão de
-              estoque e painel administrativo.</p>
+            <h3 class="project-card-title">Extensão para o VSCode I Love My Girlfriend</h3>
+            <p class="project-card-description">Idealização e desenvolvimento da extensão I Love My Girlfriend, uma
+              extensão desenvolvida com carinho e humor para aqueles que amam a sua namorada.</p>
             <div class="project-card-tags">
-              <span class="project-card-tag">React</span>
-              <span class="project-card-tag">Node.js</span>
-              <span class="project-card-tag">MongoDB</span>
+              <span class="project-card-tag">TypeScript</span>
+              <span class="project-card-tag">JSON</span>
+              <span class="project-card-tag">Git</span>
             </div>
             <div class="project-card-links">
-              <a href="#" class="project-card-link"><i class="fas fa-link"></i> Ver Demo</a>
-              <a href="#" class="project-card-link"><i class="fab fa-github"></i> Código</a>
+              <a href="https://marketplace.visualstudio.com/items?itemName=DanielRosell.ilovemygirlfriend"
+                class="project-card-link"><i class="fas fa-link"></i> Ver Demo</a>
+              <a href="https://github.com/DanielRosell06/I-Love-My-Girlfriend-VSCode-Extension"
+                class="project-card-link"><i class="fab fa-github"></i> Código</a>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg" class="project-img">
-            <rect width="400" height="200" fill="#333" />
-            <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="18px" fill="#fff" text-anchor="middle"
-              dy=".3em">Projeto 1</text>
-          </svg>
+          <img src="images/Repertorio-03.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
           <div class="project-card-content">
-            <h3 class="project-card-title">Sistema de Gestão Acadêmica</h3>
-            <p class="project-card-description">Sistema para gestão de cursos, alunos e professores com funcionalidades
-              de matrículas e acompanhamento de desempenho.</p>
+            <h3 class="project-card-title">Sistema interno e Site O Amor Pode Tanto</h3>
+            <p class="project-card-description">Planejamento e desenvolvimento do sistema interno e site da ONG Não
+              Sabia que o Meu Amor Podia Tanto.</p>
             <div class="project-card-tags">
-              <span class="project-card-tag">Java</span>
-              <span class="project-card-tag">Spring Boot</span>
-              <span class="project-card-tag">MySQL</span>
+              <span class="project-card-tag">Next.js</span>
+              <span class="project-card-tag">PostgreSQL</span>
+              <span class="project-card-tag">Vercel</span>
             </div>
             <div class="project-card-links">
-              <a href="#" class="project-card-link"><i class="fas fa-link"></i> Ver Demo</a>
-              <a href="#" class="project-card-link"><i class="fab fa-github"></i> Código</a>
+              <a href="https://oamorpodetanto.netlify.app/" class="project-card-link"><i class="fas fa-link"></i> Ver
+                Demo</a>
+              <a href="https://github.com/DanielRosell06/AmorPodeTanto" class="project-card-link"><i
+                  class="fab fa-github"></i> Código</a>
             </div>
           </div>
         </div>
+        <div class="project-card">
+          <img src="images/Repertorio-04.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
+          <div class="project-card-content">
+            <h3 class="project-card-title">Jogo ROBOS!</h3>
+            <p class="project-card-description">Desenvolviento do jogo ROBOS! na game engine Game Maker Studio 2 (ainda
+              em desenvolvimento).</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">GML</span>
+              <span class="project-card-tag">Git</span>
+              <span class="project-card-tag">Github</span>
+            </div>
+            <div class="project-card-links">
+              <a href="" class="project-card-link"></a>
+              <a href="https://github.com/DanielRosell06/Game-Development-ROBOS-" class="project-card-link"><i
+                  class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/Repertorio-05.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
+          <div class="project-card-content">
+            <h3 class="project-card-title">Site Atual Soluções em Engenharia</h3>
+            <p class="project-card-description">Criação do design, layout e código do site da empresa Atual Soluções em
+              Engenharia.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">HTML</span>
+              <span class="project-card-tag">CSS</span>
+              <span class="project-card-tag">JavaScript</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://atualsolucoes.com.br/site/" class="project-card-link"><i class="fas fa-link"></i> Ver
+                Demo</a>
+              <a href="https://github.com/DanielRosell06/Site-Atual-Soli-es" class="project-card-link"><i
+                  class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/Repertorio-06.png" alt="" style="width: 400px; height: 225px; object-fit: cover;">
+          <div class="project-card-content">
+            <h3 class="project-card-title">Renderizador 3D em C</h3>
+            <p class="project-card-description">Projeto pessoal temporário com o objetivo de melhora na programação em
+              C, e um desafio matemático sobre Geometria Analítica.</p>
+            <div class="project-card-tags">
+              <span class="project-card-tag">C</span>
+            </div>
+            <div class="project-card-links">
+              <a href="https://oamorpodetanto.netlify.app/" class="project-card-link"></a>
+              <a href="https://github.com/DanielRosell06/AmorPodeTanto" class="project-card-link"><i
+                  class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="github-projects-container">
+        <a href="https://github.com/DanielRosell06" target="_blank" class="github-button">
+          <i class="fab fa-github"></i>
+          GitHub para outros projetos
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1187,35 +1305,35 @@
               <i class="fas fa-phone"></i>
               <div class="contact-item-content">
                 <h4>Telefone</h4>
-                <p>+55 (14) 99XXX-XXXX</p>
+                <p>+55 (11) 99380-9760</p>
               </div>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <div class="contact-item-content">
                 <h4>Localização</h4>
-                <p>Campinas, SP - Brasil</p>
+                <p>Limeira, SP - Brasil</p>
               </div>
             </div>
           </div>
         </div>
         <div class="contact-right">
-          <form class="contact-form">
+          <form id="contactForm" class="contact-form" method="POST">
             <div class="form-group">
               <label for="name">Nome</label>
-              <input type="text" id="name" class="form-control" required>
+              <input type="text" id="name" name="name" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" required>
+              <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="subject">Assunto</label>
-              <input type="text" id="subject" class="form-control" required>
+              <input type="text" id="subject" name="subject" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="message">Mensagem</label>
-              <textarea id="message" class="form-control" required></textarea>
+              <textarea id="message" name="message" class="form-control" required></textarea>
             </div>
             <button type="submit" class="btn">Enviar Mensagem</button>
           </form>
@@ -1454,7 +1572,7 @@
         column.classList.add('code-column');
 
         column.style.left = `${Math.random() * 100}%`;
-        column.style.fontSize = `${Math.random() * 10  + (window.innerWidth / 100)}px`;
+        column.style.fontSize = `${Math.random() * 10 + (window.innerWidth / 100)}px`;
 
         const useSecondary = Math.random() > 0.3;
         column.style.color = useSecondary ? secondaryColor : primaryColor;
